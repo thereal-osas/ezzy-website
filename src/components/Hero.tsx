@@ -1,33 +1,33 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Smartphone, Download } from "lucide-react";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 const Hero = () => {
-  const [currentGreeting, setCurrentGreeting] = useState(0);
-  const [showFinalGreeting, setShowFinalGreeting] = useState(false);
+  // const [currentGreeting, setCurrentGreeting] = useState(0);
+  // const [showFinalGreeting, setShowFinalGreeting] = useState(false);
 
-  const greetings = [
-    "You don chow?",
-    "Se o ti jeun?",
-    "I riela nri?",
-    "Kun ci abinci?",
-  ];
+  // const greetings = [
+  //   "You don chow?",
+  //   "Se o ti jeun?",
+  //   "I riela nri?",
+  //   "Kun ci abinci?",
+  // ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentGreeting((prev) => {
-        if (prev < greetings.length - 1) {
-          return prev + 1;
-        } else {
-          setShowFinalGreeting(true);
-          clearInterval(timer);
-          return prev;
-        }
-      });
-    }, 1000);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setCurrentGreeting((prev) => {
+  //       if (prev < greetings.length - 1) {
+  //         return prev + 1;
+  //       } else {
+  //         setShowFinalGreeting(true);
+  //         clearInterval(timer);
+  //         return prev;
+  //       }
+  //     });
+  //   }, 1000);
 
-    return () => clearInterval(timer);
-  }, []);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   return (
     <section className="relative min-h-screen overflow-hidden">
