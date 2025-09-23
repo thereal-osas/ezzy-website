@@ -138,7 +138,7 @@ const Hero = () => {
             </motion.div>
 
             {/* Sequential Greeting Animation */}
-            <div className="mb-6 h-32 flex flex-col justify-center">
+            {/* <div className="mb-6 h-32 flex flex-col justify-center">
               <AnimatePresence mode="wait">
                 {greetings
                   .slice(0, currentGreeting + 1)
@@ -177,7 +177,7 @@ const Hero = () => {
                   Have you eaten?
                 </motion.p>
               )}
-            </div>
+            </div> */}
 
             {/* Main Heading */}
             <motion.h1
@@ -236,19 +236,6 @@ const Hero = () => {
                 <Smartphone className="h-5 w-5 mr-2 relative z-10 group-hover:animate-pulse" />
                 <span className="relative z-10">Download on App Store</span>
               </motion.a>
-            </motion.div>
-
-            {/* Promo Code */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.0 }}
-              className="mt-8 p-4 bg-primary-orange bg-opacity-10 rounded-lg border border-primary-orange border-opacity-20"
-            >
-              <p className="text-primary-orange font-semibold">
-                Get ₦500 off your first service when you use this promo code:{" "}
-                <span className="font-bold">EZZY500</span>
-              </p>
             </motion.div>
           </motion.div>
 
