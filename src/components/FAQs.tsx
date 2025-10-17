@@ -1,6 +1,6 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
-import { ChevronDown, HelpCircle } from 'lucide-react';
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { ChevronDown, HelpCircle } from "lucide-react";
 
 const FAQs = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -8,36 +8,44 @@ const FAQs = () => {
   const faqs = [
     {
       question: "How long does delivery usually take?",
-      answer: "Most deliveries are completed within 30-45 minutes. However, delivery times may vary based on distance, weather conditions, and order volume."
+      answer:
+        "Most deliveries are completed within 30-45 minutes. However, delivery times may vary based on distance, weather conditions, and order volume.",
     },
     {
       question: "What are the delivery fees?",
-      answer: "Delivery fees start from ₦200 and vary based on distance and order value. Orders above ₦5,000 qualify for free delivery in most areas."
+      answer:
+        "Delivery fees start from ₦200 and vary based on distance and order value. Orders above ₦5,000 qualify for free delivery in most areas.",
     },
     {
       question: "Can I track my order in real-time?",
-      answer: "Yes! Once your order is confirmed, you can track your rider's location in real-time through our app. You'll receive notifications at every step of the delivery process."
+      answer:
+        "Yes! Once your order is confirmed, you can track your rider's location in real-time through our app. You'll receive notifications at every step of the delivery process.",
     },
     {
       question: "What payment methods do you accept?",
-      answer: "We accept cash on delivery, bank transfers, card payments, and mobile money. All online payments are secured with bank-level encryption."
+      answer:
+        "We accept cash on delivery, bank transfers, card payments, and mobile money. All online payments are secured with bank-level encryption.",
     },
     {
       question: "What if my order is incorrect or damaged?",
-      answer: "If there's any issue with your order, please contact our customer support immediately. We'll either send a replacement or provide a full refund."
+      answer:
+        "If there's any issue with your order, please contact our customer support immediately. We'll either send a replacement or provide a full refund.",
     },
     {
       question: "Do you deliver 24/7?",
-      answer: "Our delivery hours vary by location and vendor. Most restaurants deliver until 11 PM, while some convenience stores and pharmacies offer 24/7 service."
+      answer:
+        "Our delivery hours vary by location and vendor. Most restaurants deliver until 11 PM, while some convenience stores and pharmacies offer 24/7 service.",
     },
     {
-      question: "How can I become a vendor on Chowdeck?",
-      answer: "Visit our vendor portal or contact our business development team. We'll guide you through the onboarding process and help set up your store on our platform."
+      question: "How can I become a vendor on Ezzy?",
+      answer:
+        "Visit our vendor portal or contact our business development team. We'll guide you through the onboarding process and help set up your store on our platform.",
     },
     {
       question: "Is there a minimum order amount?",
-      answer: "Minimum order amounts vary by vendor, typically ranging from ₦1,000 to ₦2,500. This information is displayed on each vendor's page."
-    }
+      answer:
+        "Minimum order amounts vary by vendor, typically ranging from ₦1,000 to ₦2,500. This information is displayed on each vendor's page.",
+    },
   ];
 
   const toggleFAQ = (index: number) => {
@@ -82,7 +90,7 @@ const FAQs = () => {
             >
               <motion.button
                 onClick={() => toggleFAQ(index)}
-                whileHover={{ backgroundColor: '#f3f4f6' }}
+                whileHover={{ backgroundColor: "#f3f4f6" }}
                 className="w-full px-6 py-6 text-left flex items-center justify-between focus:outline-none"
               >
                 <h3 className="text-lg font-semibold text-gray-900 pr-4">
@@ -95,12 +103,12 @@ const FAQs = () => {
                   <ChevronDown className="w-5 h-5 text-primary-orange" />
                 </motion.div>
               </motion.button>
-              
+
               <AnimatePresence>
                 {openFAQ === index && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
+                    animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
@@ -132,7 +140,10 @@ const FAQs = () => {
             Our customer support team is here to help you 24/7
           </p>
           <motion.button
-            whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(255,107,53,0.3)" }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 10px 25px rgba(255,107,53,0.3)",
+            }}
             whileTap={{ scale: 0.95 }}
             className="bg-primary-orange text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-all duration-300"
           >

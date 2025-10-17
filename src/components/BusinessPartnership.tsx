@@ -10,7 +10,7 @@ const BusinessPartnership = () => {
       description:
         "Do you own a restaurant, store, or pharmacy? Join our network to reach new customers and grow your business with ease.",
       buttonText: "see more",
-      bgColor: "bg-orange-50",
+      bgColor: "bg-custom-dark-secondary",
       iconColor: "text-orange-600",
       buttonColor: "bg-orange-600 hover:bg-orange-700",
     },
@@ -21,7 +21,7 @@ const BusinessPartnership = () => {
       description:
         "Join our elite league of delivery riders delivering happiness to customers and earn to achieve your dreams while at it.",
       buttonText: "see more",
-      bgColor: "bg-blue-50",
+      bgColor: "bg-custom-dark-secondary",
       iconColor: "text-blue-600",
       buttonColor: "bg-blue-600 hover:bg-blue-700",
     },
@@ -32,14 +32,14 @@ const BusinessPartnership = () => {
       description:
         "If you are passionate about helping us achieve our goal to deliver meals seamlessly, come join the team.",
       buttonText: "see more",
-      bgColor: "bg-green-50",
+      bgColor: "bg-custom-dark-secondary",
       iconColor: "text-green-600",
       buttonColor: "bg-green-600 hover:bg-green-700",
     },
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-custom-dark relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Partnership Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -56,7 +56,7 @@ const BusinessPartnership = () => {
                 className="group"
               >
                 <div
-                  className={`${partnership.bgColor} rounded-2xl p-8 h-full transition-all duration-300 group-hover:shadow-xl border border-gray-100`}
+                  className={`${partnership.bgColor} rounded-2xl p-8 h-full transition-all duration-300 group-hover:shadow-xl border border-custom-dark-tertiary `}
                 >
                   {/* Icon */}
                   <motion.div
@@ -68,7 +68,7 @@ const BusinessPartnership = () => {
                   </motion.div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-2xl font-bold text-white mb-2">
                     {partnership.title}
                   </h3>
 
@@ -78,7 +78,7 @@ const BusinessPartnership = () => {
                   </h4>
 
                   {/* Description */}
-                  <p className="text-gray-600 leading-relaxed mb-8">
+                  <p className="text-gray-300 leading-relaxed mb-8">
                     {partnership.description}
                   </p>
 

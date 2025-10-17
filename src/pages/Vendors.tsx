@@ -78,7 +78,7 @@ const Vendors = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-white via-orange-50 to-orange-100">
+      <section className="py-20 bg-gradient-to-br from-custom-dark via-custom-dark-secondary to-custom-dark-tertiary relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -86,10 +86,10 @@ const Vendors = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
               Partner with <span className="text-primary-orange">Ezzy</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Join thousands of successful vendors who are growing their
               business with our platform. From restaurants to retail stores, we
               help you reach more customers and increase your revenue.
@@ -100,9 +100,9 @@ const Vendors = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="w-full max-w-3xl mx-auto h-48 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl border-2 border-dashed border-orange-300 flex items-center justify-center mb-8"
+              className="w-full max-w-3xl mx-auto h-48 bg-gradient-to-br from-custom-dark-secondary to-custom-dark-tertiary rounded-2xl border-2 border-dashed border-orange-400 flex items-center justify-center mb-8 shadow-2xl"
             >
-              <div className="text-center text-orange-600">
+              <div className="text-center text-orange-400">
                 <div className="text-4xl mb-2">🤝</div>
                 <p className="text-lg font-medium">Vendor Success Stories</p>
                 <p className="text-sm opacity-75">
@@ -125,7 +125,7 @@ const Vendors = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-custom-dark relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -134,10 +134,10 @@ const Vendors = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
               Why Choose Ezzy?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We provide everything you need to succeed in the digital
               marketplace
             </p>
@@ -154,7 +154,7 @@ const Vendors = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10 }}
-                  className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100"
+                  className="bg-custom-dark-secondary rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-custom-dark-tertiary backdrop-blur-sm"
                 >
                   <motion.div
                     whileHover={{ rotate: 10, scale: 1.1 }}
@@ -162,10 +162,10 @@ const Vendors = () => {
                   >
                     <IconComponent className="w-8 h-8" />
                   </motion.div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl font-bold text-white mb-3">
                     {benefit.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed">
                     {benefit.description}
                   </p>
                 </motion.div>
@@ -176,7 +176,7 @@ const Vendors = () => {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-custom-dark relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -185,10 +185,10 @@ const Vendors = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
               How to Get Started
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Join our platform in just four simple steps
             </p>
           </motion.div>
@@ -209,10 +209,10 @@ const Vendors = () => {
                 >
                   {step.number}
                 </motion.div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-white mb-3">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed">
                   {step.description}
                 </p>
               </motion.div>
@@ -237,16 +237,17 @@ const Vendors = () => {
               Join thousands of successful vendors on Ezzy and start reaching
               more customers today.
             </p>
-            <motion.button
+            <motion.a
+              href="https://dev.ezzymarket.com"
               whileHover={{
                 scale: 1.05,
                 boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
               }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-primary-orange px-8 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition-all duration-300"
+              className="inline-block bg-custom-dark-secondary text-primary-orange px-8 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition-all duration-300 border border-custom-dark-tertiary hover:border-primary-orange/50"
             >
               Apply Now
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
       </section>

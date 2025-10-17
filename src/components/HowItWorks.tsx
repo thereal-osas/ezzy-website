@@ -32,7 +32,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-custom-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -42,10 +42,10 @@ const HowItWorks = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Get started in 30
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+            Get started in 5
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Simple steps to get your favorite food and essentials delivered
           </p>
         </motion.div>
@@ -76,7 +76,7 @@ const HowItWorks = () => {
 
                   {/* Connecting Line (except for last item) */}
                   {index < steps.length - 1 && (
-                    <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gray-200 -translate-y-1/2">
+                    <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-custom-dark-tertiary -translate-y-1/2">
                       <motion.div
                         initial={{ scaleX: 0 }}
                         whileInView={{ scaleX: 1 }}
@@ -98,12 +98,12 @@ const HowItWorks = () => {
                 </motion.div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-gray-300 mb-3">
                   {step.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed">
                   {step.description}
                 </p>
               </motion.div>

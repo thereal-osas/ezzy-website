@@ -97,7 +97,7 @@ const FAQs = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-white via-orange-50 to-orange-100">
+      <section className="py-20 bg-gradient-to-br from-custom-dark via-custom-dark-secondary to-custom-dark-tertiary relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -110,10 +110,10 @@ const FAQs = () => {
             >
               <HelpCircle className="w-8 h-8" />
             </motion.div>
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
               Frequently Asked Questions
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               Find answers to common questions about Ezzy's services
             </p>
 
@@ -147,7 +147,7 @@ const FAQs = () => {
       </section>
 
       {/* FAQ Categories */}
-      <section className="py-8 bg-white border-b">
+      <section className="py-8 bg-custom-dark border-b border-custom-dark-tertiary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
@@ -155,7 +155,7 @@ const FAQs = () => {
                 key={category}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-primary-orange hover:text-white transition-all duration-300"
+                className="px-4 py-2 bg-custom-dark-secondary text-gray-300 rounded-full hover:bg-primary-orange hover:text-white transition-all duration-300 border border-custom-dark-tertiary"
               >
                 {category}
               </motion.button>
@@ -165,7 +165,7 @@ const FAQs = () => {
       </section>
 
       {/* FAQ List */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-custom-dark relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-4">
             {filteredFAQs.map((faq, index) => (
@@ -175,7 +175,7 @@ const FAQs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-50 rounded-2xl overflow-hidden"
+                className="bg-custom-dark-secondary rounded-2xl overflow-hidden border border-custom-dark-tertiary backdrop-blur-sm"
               >
                 <motion.button
                   onClick={() => toggleFAQ(index)}
@@ -186,7 +186,7 @@ const FAQs = () => {
                     <span className="bg-primary-orange text-white text-xs px-2 py-1 rounded-full mr-4">
                       {faq.category}
                     </span>
-                    <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                    <h3 className="text-lg font-semibold text-white pr-4">
                       {faq.question}
                     </h3>
                   </div>
@@ -208,7 +208,7 @@ const FAQs = () => {
                       className="overflow-hidden"
                     >
                       <div className="px-6 pb-6">
-                        <p className="text-gray-600 leading-relaxed">
+                        <p className="text-gray-300 leading-relaxed">
                           {faq.answer}
                         </p>
                       </div>
@@ -239,10 +239,10 @@ const FAQs = () => {
             viewport={{ once: true }}
             className="mt-16 text-center"
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-bold text-white mb-4">
               Still have questions?
             </h3>
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-300 mb-8">
               Our customer support team is here to help you 24/7
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,71 +1,91 @@
-import { motion } from 'framer-motion';
-import { Calendar, User, ArrowRight, Clock } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Calendar, User, ArrowRight, Clock } from "lucide-react";
 
 const Blog = () => {
   const blogPosts = [
     {
       id: 1,
-      title: "10 Best Nigerian Dishes You Can Order on Chowdeck",
-      excerpt: "Discover the most popular Nigerian dishes available for delivery and why they're customer favorites.",
-      author: "Chowdeck Team",
+      title: "10 Best Nigerian Dishes You Can Order on Ezzy",
+      excerpt:
+        "Discover the most popular Nigerian dishes available for delivery and why they're customer favorites.",
+      author: "Ezzy Team",
       date: "March 15, 2024",
       readTime: "5 min read",
-      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=250&fit=crop",
-      category: "Food"
+      image:
+        "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=250&fit=crop",
+      category: "Food",
     },
     {
       id: 2,
-      title: "How to Start Your Food Business with Chowdeck",
-      excerpt: "A comprehensive guide for restaurant owners looking to expand their reach through delivery services.",
+      title: "How to Start Your Food Business with Ezzy",
+      excerpt:
+        "A comprehensive guide for restaurant owners looking to expand their reach through delivery services.",
       author: "Business Team",
       date: "March 12, 2024",
       readTime: "8 min read",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=250&fit=crop",
-      category: "Business"
+      image:
+        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=250&fit=crop",
+      category: "Business",
     },
     {
       id: 3,
       title: "The Future of Food Delivery in Nigeria",
-      excerpt: "Exploring trends and innovations shaping the food delivery landscape in Nigeria.",
+      excerpt:
+        "Exploring trends and innovations shaping the food delivery landscape in Nigeria.",
       author: "Tech Team",
       date: "March 10, 2024",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1526367790999-0150786686a2?w=400&h=250&fit=crop",
-      category: "Technology"
+      image:
+        "https://images.unsplash.com/photo-1526367790999-0150786686a2?w=400&h=250&fit=crop",
+      category: "Technology",
     },
     {
       id: 4,
-      title: "Healthy Eating: Nutritious Options on Chowdeck",
-      excerpt: "Find out how to maintain a healthy diet while enjoying the convenience of food delivery.",
+      title: "Healthy Eating: Nutritious Options on Ezzy",
+      excerpt:
+        "Find out how to maintain a healthy diet while enjoying the convenience of food delivery.",
       author: "Nutrition Team",
       date: "March 8, 2024",
       readTime: "4 min read",
-      image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop",
-      category: "Health"
+      image:
+        "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop",
+      category: "Health",
     },
     {
       id: 5,
-      title: "Behind the Scenes: A Day in the Life of a Chowdeck Rider",
-      excerpt: "Meet our delivery heroes and learn about their daily experiences bringing food to your doorstep.",
+      title: "Behind the Scenes: A Day in the Life of a Ezzy Rider",
+      excerpt:
+        "Meet our delivery heroes and learn about their daily experiences bringing food to your doorstep.",
       author: "Operations Team",
       date: "March 5, 2024",
       readTime: "7 min read",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=250&fit=crop",
-      category: "Stories"
+      image:
+        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=250&fit=crop",
+      category: "Stories",
     },
     {
       id: 6,
       title: "Seasonal Specials: What's Trending This Month",
-      excerpt: "Discover the seasonal dishes and special offers that are making waves on our platform.",
+      excerpt:
+        "Discover the seasonal dishes and special offers that are making waves on our platform.",
       author: "Marketing Team",
       date: "March 3, 2024",
       readTime: "3 min read",
-      image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=250&fit=crop",
-      category: "Trends"
-    }
+      image:
+        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=250&fit=crop",
+      category: "Trends",
+    },
   ];
 
-  const categories = ["All", "Food", "Business", "Technology", "Health", "Stories", "Trends"];
+  const categories = [
+    "All",
+    "Food",
+    "Business",
+    "Technology",
+    "Health",
+    "Stories",
+    "Trends",
+  ];
 
   return (
     <section id="blog" className="py-20 bg-gray-50">
@@ -82,7 +102,8 @@ const Blog = () => {
             Latest from Our Blog
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay updated with the latest news, tips, and insights from the world of food delivery
+            Stay updated with the latest news, tips, and insights from the world
+            of food delivery
           </p>
         </motion.div>
 
@@ -100,9 +121,9 @@ const Blog = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-                index === 0 
-                  ? 'bg-primary-orange text-white' 
-                  : 'bg-white text-gray-600 hover:bg-primary-orange hover:text-white'
+                index === 0
+                  ? "bg-primary-orange text-white"
+                  : "bg-white text-gray-600 hover:bg-primary-orange hover:text-white"
               }`}
             >
               {category}
@@ -123,8 +144,8 @@ const Blog = () => {
               className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
             >
               <div className="relative overflow-hidden">
-                <img 
-                  src={post.image} 
+                <img
+                  src={post.image}
                   alt={post.title}
                   className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
                 />
@@ -134,7 +155,7 @@ const Blog = () => {
                   </span>
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
                   {post.title}
@@ -142,7 +163,7 @@ const Blog = () => {
                 <p className="text-gray-600 mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
-                
+
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                   <div className="flex items-center space-x-4">
                     <div className="flex items-center">
@@ -159,7 +180,7 @@ const Blog = () => {
                     {post.readTime}
                   </div>
                 </div>
-                
+
                 <motion.button
                   whileHover={{ x: 5 }}
                   className="flex items-center text-primary-orange font-medium hover:text-orange-600 transition-colors duration-200"
@@ -181,7 +202,10 @@ const Blog = () => {
           className="text-center mt-12"
         >
           <motion.button
-            whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(255,107,53,0.3)" }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 10px 25px rgba(255,107,53,0.3)",
+            }}
             whileTap={{ scale: 0.95 }}
             className="bg-primary-orange text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-all duration-300"
           >

@@ -56,7 +56,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50 overflow-hidden">
+    <section className="py-20 bg-custom-dark overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -66,10 +66,10 @@ const Features = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             Ezzy has you covered
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             What do you need? A quick ride? Last-minute delivery? Equipment
             rental? Daily essentials? Download Ezzy and let's deliver
             convenience to your doorstep in minutes.
@@ -98,7 +98,7 @@ const Features = () => {
                   scale: 1.05,
                   boxShadow: "0 15px 30px rgba(255,107,53,0.1)",
                 }}
-                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group cursor-pointer"
+                className="bg-custom-dark-secondary rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-custom-dark-tertiary group cursor-pointer backdrop-blur-sm"
               >
                 <motion.div
                   whileHover={{ rotate: 10, scale: 1.1 }}
@@ -108,11 +108,11 @@ const Features = () => {
                   <IconComponent className="w-full h-full" />
                 </motion.div>
 
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-white mb-2">
                   {feature.title}
                 </h3>
 
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>
@@ -142,7 +142,7 @@ const Features = () => {
                 <span className="text-white font-medium text-lg">
                   {feature.title}
                 </span>
-                <div className="w-2 h-2 bg-white rounded-full mx-6" />
+                <div className="w-2 h-2 bg-primary-orange rounded-full mx-6" />
               </div>
             ))}
           </motion.div>

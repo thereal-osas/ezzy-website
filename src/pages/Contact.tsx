@@ -32,7 +32,7 @@ const Contact = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-white via-orange-50 to-orange-100">
+      <section className="py-20 bg-gradient-to-br from-custom-dark via-custom-dark-secondary to-custom-dark-tertiary relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -40,10 +40,10 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
               Get in <span className="text-primary-orange">Touch</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Have questions, feedback, or need support? We'd love to hear from
               you. Our team is here to help you with anything you need.
             </p>
@@ -68,7 +68,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Info */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-custom-dark relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {contactInfo.map((info, index) => {
@@ -89,13 +89,13 @@ const Contact = () => {
                   >
                     <IconComponent className="w-8 h-8" />
                   </motion.div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-xl font-bold text-white mb-2">
                     {info.title}
                   </h3>
                   <p className="text-primary-orange font-semibold mb-1">
                     {info.details}
                   </p>
-                  <p className="text-gray-600 text-sm">{info.description}</p>
+                  <p className="text-gray-300 text-sm">{info.description}</p>
                 </motion.div>
               );
             })}
@@ -110,47 +110,47 @@ const Contact = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl font-bold text-white mb-6">
                 Send us a Message
               </h2>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
                       First Name
                     </label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-custom-dark-tertiary bg-custom-dark-secondary text-white rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent transition-all duration-200 placeholder-gray-400"
                       placeholder="Your first name"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
                       Last Name
                     </label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-custom-dark-tertiary bg-custom-dark-secondary text-white rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent transition-all duration-200 placeholder-gray-400"
                       placeholder="Your last name"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
                     Email
                   </label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 border border-custom-dark-tertiary bg-custom-dark-secondary text-white rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent transition-all duration-200 placeholder-gray-400"
                     placeholder="your.email@example.com"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
                     Subject
                   </label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent transition-all duration-200">
+                  <select className="w-full px-4 py-3 border border-custom-dark-tertiary bg-custom-dark-secondary text-white rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent transition-all duration-200">
                     <option>General Inquiry</option>
                     <option>Customer Support</option>
                     <option>Vendor Partnership</option>
@@ -160,12 +160,12 @@ const Contact = () => {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
                     Message
                   </label>
                   <textarea
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 border border-custom-dark-tertiary bg-custom-dark-secondary text-white rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent transition-all duration-200 placeholder-gray-400"
                     placeholder="Tell us how we can help you..."
                   ></textarea>
                 </div>
@@ -192,10 +192,10 @@ const Contact = () => {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl font-bold text-white mb-6">
                   Let's Connect
                 </h2>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-300 mb-6">
                   We're always excited to hear from our users, partners, and
                   community members. Whether you have a question, suggestion, or
                   just want to say hello, don't hesitate to reach out.
@@ -211,21 +211,21 @@ const Contact = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-white text-primary-orange px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center"
+                  className="bg-custom-dark-secondary text-primary-orange px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center border border-custom-dark-tertiary hover:border-primary-orange/50"
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Start Live Chat
                 </motion.button>
               </div>
 
-              <div className="bg-gray-50 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <div className="bg-custom-dark-secondary rounded-2xl p-8 border border-custom-dark-tertiary backdrop-blur-sm">
+                <h3 className="text-2xl font-bold text-white mb-4">
                   Business Inquiries
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-300 mb-4">
                   Interested in partnering with us or have a business proposal?
                 </p>
-                <div className="space-y-2 text-sm text-gray-600">
+                <div className="space-y-2 text-sm text-gray-300">
                   <p>
                     <strong>Partnerships:</strong> partnerships@ezzy.com
                   </p>
@@ -238,11 +238,11 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="bg-gray-50 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <div className="bg-custom-dark-secondary rounded-2xl p-8 border border-custom-dark-tertiary backdrop-blur-sm">
+                <h3 className="text-2xl font-bold text-white mb-4">
                   Office Hours
                 </h3>
-                <div className="space-y-2 text-gray-600">
+                <div className="space-y-2 text-gray-300">
                   <p>
                     <strong>Monday - Friday:</strong> 8:00 AM - 8:00 PM
                   </p>

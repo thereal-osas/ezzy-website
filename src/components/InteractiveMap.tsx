@@ -54,7 +54,7 @@ const InteractiveMap = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-custom-dark relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -64,10 +64,10 @@ const InteractiveMap = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             Click on any live location to order from restaurants near you
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover amazing restaurants in your area
           </p>
         </motion.div>
@@ -150,12 +150,10 @@ const InteractiveMap = () => {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.8 }}
                   transition={{ duration: 0.3 }}
-                  className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white rounded-lg shadow-xl p-4 min-w-48 border border-gray-100"
+                  className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-custom-dark-secondary rounded-lg shadow-xl p-4 min-w-48 border border-custom-dark-tertiary backdrop-blur-sm"
                 >
-                  <h3 className="font-bold text-gray-900 mb-1">
-                    {location.name}
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-2">
+                  <h3 className="font-bold text-white mb-1">{location.name}</h3>
+                  <p className="text-sm text-gray-300 mb-2">
                     {location.cuisine}
                   </p>
 
@@ -164,7 +162,7 @@ const InteractiveMap = () => {
                       <Star className="w-4 h-4 text-yellow-400 mr-1" />
                       <span className="font-medium">{location.rating}</span>
                     </div>
-                    <div className="flex items-center text-gray-600">
+                    <div className="flex items-center text-gray-300">
                       <Clock className="w-4 h-4 mr-1" />
                       <span>{location.deliveryTime}</span>
                     </div>
@@ -183,10 +181,10 @@ const InteractiveMap = () => {
           ))}
 
           {/* Map Legend */}
-          <div className="absolute bottom-4 left-4 bg-white rounded-lg p-3 shadow-lg">
+          <div className="absolute bottom-4 left-4 bg-custom-dark-secondary rounded-lg p-3 shadow-lg border border-custom-dark-tertiary backdrop-blur-sm">
             <div className="flex items-center space-x-2">
               <div className="w-3 h-3 bg-primary-orange rounded-full"></div>
-              <span className="text-sm font-medium text-gray-700">
+              <span className="text-sm font-medium text-gray-300">
                 Restaurants
               </span>
             </div>
@@ -201,7 +199,7 @@ const InteractiveMap = () => {
           viewport={{ once: true }}
           className="text-center mt-8"
         >
-          <p className="text-gray-600">
+          <p className="text-gray-300">
             Click on any marker to see restaurant details and place your order
           </p>
         </motion.div>

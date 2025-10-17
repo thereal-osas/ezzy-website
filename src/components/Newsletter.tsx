@@ -16,7 +16,7 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-custom-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Newsletter Section */}
         <motion.div
@@ -26,10 +26,10 @@ const Newsletter = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             Cool stuff only
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-300 mb-8">
             Subscribe to our newsletter
           </p>
 
@@ -80,13 +80,13 @@ const Newsletter = () => {
             Place your order in seconds
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Download the Chowdeck app and start ordering now
+            Download the Ezzy app and start ordering now
           </p>
 
           {/* App Download Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <motion.a
-              href="#"
+              href="https://dev.ezzymarket.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center justify-center bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200"
@@ -95,7 +95,7 @@ const Newsletter = () => {
               Download on Google Play
             </motion.a>
             <motion.a
-              href="#"
+              href="https://dev.ezzymarket.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center justify-center bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200"
@@ -106,23 +106,6 @@ const Newsletter = () => {
           </div>
 
           {/* Promo Code Highlight */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="bg-white bg-opacity-20 rounded-2xl p-6 backdrop-blur-sm border border-white border-opacity-30"
-          >
-            <h3 className="text-2xl font-bold mb-2">
-              Get ₦300 off your first order!
-            </h3>
-            <p className="text-lg mb-4 opacity-90">
-              Use promo code when you download the app
-            </p>
-            <div className="bg-white text-primary-orange px-6 py-3 rounded-lg font-bold text-xl inline-block">
-              CDNWEB
-            </div>
-          </motion.div>
         </motion.div>
 
         {/* Stories Section */}
@@ -133,8 +116,8 @@ const Newsletter = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Stories</h3>
-          <p className="text-gray-600">
+          <h3 className="text-2xl font-bold text-white mb-4">Stories</h3>
+          <p className="text-gray-300">
             No stories at the moment, check again later!
           </p>
         </motion.div>
@@ -148,10 +131,10 @@ const Newsletter = () => {
           className="text-center mt-8"
         >
           <motion.a
-            href="#"
+            href="https://dev.ezzymarket.com"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block bg-white text-primary-orange px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-200 border border-gray-200"
+            className="inline-block bg-custom-dark-secondary text-primary-orange px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-200 border border-custom-dark-tertiary hover:border-primary-orange/50"
           >
             FAQs.
           </motion.a>

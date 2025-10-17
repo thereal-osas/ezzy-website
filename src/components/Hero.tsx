@@ -30,9 +30,18 @@ const Hero = () => {
   // }, []);
 
   return (
-    <section className="relative min-h-screen overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-orange-50 to-orange-100">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Enhanced Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-custom-dark via-custom-dark-secondary to-custom-dark-tertiary">
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-orange/5 via-transparent to-primary-orange/10"></div>
+        {/* Radial Gradient */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-orange/10 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow delay-1000"></div>
+      </div>
+
+      {/* Floating Particles and Animations */}
+      <div className="absolute inset-0">
         {/* Floating Particles */}
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -126,9 +135,9 @@ const Hero = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="w-full h-64 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl border-2 border-dashed border-orange-300 flex items-center justify-center mb-8 lg:hidden"
+              className="w-full h-64 bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl border-2 border-dashed border-orange-400 flex items-center justify-center mb-8 lg:hidden"
             >
-              <div className="text-center text-orange-600">
+              <div className="text-center text-orange-400">
                 <div className="text-4xl mb-2">🎨</div>
                 <p className="text-sm font-medium">Hero Illustration</p>
                 <p className="text-xs opacity-75">
@@ -154,7 +163,7 @@ const Hero = () => {
                         stiffness: 100,
                         damping: 15,
                       }}
-                      className="text-lg text-gray-600 mb-2"
+                      className="text-lg text-gray-300 mb-2"
                     >
                       {greeting}
                     </motion.p>
@@ -184,10 +193,12 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
+              className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight"
             >
               Everything You Need{" "}
-              <span className="text-primary-orange">Delivered with Ease</span>
+              <span className="bg-gradient-to-r from-primary-orange via-orange-500 to-orange-600 bg-clip-text text-transparent animate-glow">
+                Delivered with Ease
+              </span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -195,7 +206,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-xl text-gray-600 mb-8 max-w-2xl"
+              className="text-xl text-gray-300 mb-8 max-w-2xl"
             >
               Download Ezzy and experience seamless delivery, quick rides, and
               convenient rentals - all in one app.
@@ -209,7 +220,7 @@ const Hero = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <motion.a
-                href="#"
+                href="https://dev.ezzymarket.com"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
@@ -223,7 +234,7 @@ const Hero = () => {
                 <span className="relative z-10">Download on Google Play</span>
               </motion.a>
               <motion.a
-                href="#"
+                href="https://dev.ezzymarket.com"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
@@ -233,7 +244,7 @@ const Hero = () => {
                 className="group flex items-center justify-center bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-all duration-300 relative overflow-hidden"
               >
                 <motion.div className="absolute inset-0 bg-gradient-to-r from-primary-orange to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <Smartphone className="h-5 w-5 mr-2 relative z-10 group-hover:animate-pulse" />
+                <Smartphone className="h-5 w-5 mr-2 relative z-10 group-hover:animate-bounce" />
                 <span className="relative z-10">Download on App Store</span>
               </motion.a>
             </motion.div>
@@ -252,9 +263,9 @@ const Hero = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="w-full h-96 bg-gradient-to-br from-orange-100 to-orange-200 rounded-3xl border-2 border-dashed border-orange-300 flex items-center justify-center shadow-2xl"
+                className="w-full h-96 bg-gradient-to-br from-gray-800 to-gray-700 rounded-3xl border-2 border-dashed border-orange-400 flex items-center justify-center shadow-2xl"
               >
-                <div className="text-center text-orange-600">
+                <div className="text-center text-orange-400">
                   <div className="text-6xl mb-4">📱</div>
                   <p className="text-lg font-medium mb-2">
                     App Interface Mockup
@@ -271,9 +282,9 @@ const Hero = () => {
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-orange-200 to-orange-300 rounded-2xl border border-dashed border-orange-400 flex items-center justify-center"
+                className="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-gray-700 to-gray-600 rounded-2xl border border-dashed border-orange-400 flex items-center justify-center"
               >
-                <div className="text-center text-orange-700">
+                <div className="text-center text-orange-400">
                   <div className="text-2xl">🚀</div>
                   <p className="text-xs">Feature</p>
                 </div>
@@ -283,9 +294,9 @@ const Hero = () => {
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
-                className="absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-br from-orange-200 to-orange-300 rounded-xl border border-dashed border-orange-400 flex items-center justify-center"
+                className="absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-br from-gray-700 to-gray-600 rounded-xl border border-dashed border-orange-400 flex items-center justify-center"
               >
-                <div className="text-center text-orange-700">
+                <div className="text-center text-orange-400">
                   <div className="text-xl">⭐</div>
                   <p className="text-xs">Rating</p>
                 </div>

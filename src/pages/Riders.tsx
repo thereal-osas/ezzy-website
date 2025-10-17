@@ -44,7 +44,7 @@ const Riders = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-white via-orange-50 to-orange-100">
+      <section className="py-20 bg-gradient-to-br from-custom-dark via-custom-dark-secondary to-custom-dark-tertiary relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -52,11 +52,11 @@ const Riders = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
               Join the <span className="text-primary-orange">Ezzy</span> Rider
               Network
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Become part of our elite team and start earning while providing
               essential services - from deliveries to rides - across the city.
             </p>
@@ -76,22 +76,23 @@ const Riders = () => {
                 </p>
               </div>
             </motion.div>
-            <motion.button
+            <motion.a
+              href="https://dev.ezzymarket.com"
               whileHover={{
                 scale: 1.05,
                 boxShadow: "0 10px 25px rgba(255,107,53,0.3)",
               }}
               whileTap={{ scale: 0.95 }}
-              className="bg-primary-orange text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-all duration-300"
+              className="inline-block bg-primary-orange text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-all duration-300"
             >
               Apply to Become a Rider
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
       </section>
 
       {/* Earning Potential */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-custom-dark relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -130,10 +131,10 @@ const Riders = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
               Why Ride with Ezzy?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We provide everything you need to succeed as a rider
             </p>
           </motion.div>
@@ -149,7 +150,7 @@ const Riders = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10 }}
-                  className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100"
+                  className="bg-custom-dark-secondary rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-custom-dark-tertiary backdrop-blur-sm"
                 >
                   <motion.div
                     whileHover={{ rotate: 10, scale: 1.1 }}
@@ -157,10 +158,10 @@ const Riders = () => {
                   >
                     <IconComponent className="w-8 h-8" />
                   </motion.div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl font-bold text-white mb-3">
                     {benefit.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed">
                     {benefit.description}
                   </p>
                 </motion.div>
@@ -171,7 +172,7 @@ const Riders = () => {
       </section>
 
       {/* Requirements */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-custom-dark relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -180,10 +181,10 @@ const Riders = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
               Requirements to Join
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Simple requirements to get started with Ezzy
             </p>
           </motion.div>
@@ -193,14 +194,14 @@ const Riders = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl p-8 shadow-sm max-w-4xl mx-auto"
+            className="bg-custom-dark-secondary rounded-2xl p-8 shadow-sm max-w-4xl mx-auto border border-custom-dark-tertiary backdrop-blur-sm"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                <h3 className="text-2xl font-bold text-white mb-6">
                   Basic Requirements:
                 </h3>
-                <ul className="space-y-3 text-gray-600">
+                <ul className="space-y-3 text-gray-300">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-primary-orange rounded-full mr-3"></div>
                     Valid driver's license or ID
@@ -224,10 +225,10 @@ const Riders = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                <h3 className="text-2xl font-bold text-white mb-6">
                   Preferred Qualifications:
                 </h3>
-                <ul className="space-y-3 text-gray-600">
+                <ul className="space-y-3 text-gray-300">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-primary-orange rounded-full mr-3"></div>
                     Previous delivery or ride experience
@@ -271,16 +272,17 @@ const Riders = () => {
               Join the Ezzy family and start earning while making a difference
               in your community.
             </p>
-            <motion.button
+            <motion.a
+              href="https://dev.ezzymarket.com"
               whileHover={{
                 scale: 1.05,
                 boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
               }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-primary-orange px-8 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition-all duration-300"
+              className="inline-block bg-custom-dark-secondary text-primary-orange px-8 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition-all duration-300 border border-custom-dark-tertiary hover:border-primary-orange/50"
             >
               Apply Now
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
       </section>

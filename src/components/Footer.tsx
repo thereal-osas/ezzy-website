@@ -29,38 +29,16 @@ const Footer = () => {
     },
   ];
 
-  const cuisines = [
-    "Pasta near me",
-    "Rice near me",
-    "Fast food near me",
-    "Asian food in Lagos",
-    "African food in Lagos",
-    "Breakfast menu in Lagos",
-    "Fitfam stores in Lagos",
-    "American food in Lagos",
-    "Pastries in Lagos",
-    "Salad in Lagos",
-    "Fruits in Lagos",
-  ];
-
-  const popularLocations = [
-    "Food delivery",
-    "Surulere",
-    "Ogudu",
-    "Yaba",
-    "Ikeja",
-    "Lekki",
-    "King Glab",
-    "Korede Spaghetti",
-    "Iyan Aladuke",
-    "Food Fusion",
-    "Belefull",
-  ];
-
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-custom-dark text-white relative overflow-hidden">
+      {/* Background Decorative Elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-10 right-10 w-40 h-40 bg-primary-orange rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-32 h-32 bg-blue-500 rounded-full blur-3xl"></div>
+      </div>
+
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {footerSections.map((section, index) => (
             <motion.div
@@ -76,7 +54,7 @@ const Footer = () => {
                 {section.links.map((link) => (
                   <li key={link}>
                     <a
-                      href="#"
+                      href="https://dev.ezzymarket.com"
                       className="text-gray-300 hover:text-white transition-colors duration-200"
                     >
                       {link}
@@ -87,52 +65,6 @@ const Footer = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Cuisines Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12 pt-8 border-t border-gray-700"
-        >
-          <h3 className="text-lg font-semibold mb-4 text-primary-orange">
-            Cuisines near you
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-            {cuisines.map((cuisine) => (
-              <a
-                key={cuisine}
-                href="#"
-                className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
-              >
-                {cuisine}
-              </a>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Popular Locations */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-8"
-        >
-          <h3 className="text-lg font-semibold mb-4 text-primary-orange">
-            Popular
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-            {popularLocations.map((location) => (
-              <a
-                key={location}
-                href="#"
-                className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
-              >
-                {location}
-              </a>
-            ))}
-          </div>
-        </motion.div>
       </div>
 
       {/* Bottom Footer */}
@@ -147,25 +79,25 @@ const Footer = () => {
               className="flex space-x-6 mb-4 md:mb-0"
             >
               <a
-                href="#"
+                href="https://dev.ezzymarket.com"
                 className="text-gray-400 hover:text-primary-orange transition-colors duration-200"
               >
                 <Twitter className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://dev.ezzymarket.com"
                 className="text-gray-400 hover:text-primary-orange transition-colors duration-200"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://dev.ezzymarket.com"
                 className="text-gray-400 hover:text-primary-orange transition-colors duration-200"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://dev.ezzymarket.com"
                 className="text-gray-400 hover:text-primary-orange transition-colors duration-200"
               >
                 <Linkedin className="h-5 w-5" />

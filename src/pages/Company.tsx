@@ -11,8 +11,15 @@ const Company = () => {
 
   return (
     <div className="pt-16">
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-custom-dark relative overflow-hidden">
+        {/* Background Decorative Elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-40 h-40 bg-primary-orange rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 right-20 w-32 h-32 bg-blue-500 rounded-full blur-3xl animate-float delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-purple-500 rounded-full blur-3xl animate-pulse-slow"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -21,10 +28,10 @@ const Company = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
               About Ezzy
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               We're revolutionizing how you access everything you need - from
               delicious meals and daily essentials to quick rides and convenient
               rentals, all in one seamless platform.
@@ -36,9 +43,9 @@ const Company = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="w-full max-w-4xl mx-auto h-64 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl border-2 border-dashed border-orange-300 flex items-center justify-center"
+              className="w-full max-w-4xl mx-auto h-64 bg-gradient-to-br from-custom-dark-secondary to-custom-dark-tertiary rounded-2xl border-2 border-dashed border-orange-400 flex items-center justify-center shadow-2xl"
             >
-              <div className="text-center text-orange-600">
+              <div className="text-center text-orange-400">
                 <div className="text-5xl mb-3">🏢</div>
                 <p className="text-lg font-medium">Company Overview Visual</p>
                 <p className="text-sm opacity-75">
@@ -57,27 +64,33 @@ const Company = () => {
             className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20"
           >
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Our Story
-              </h2>
-              <p className="text-gray-600 mb-4 leading-relaxed">
+              <h2 className="text-3xl font-bold text-white mb-6">Our Story</h2>
+              <p className="text-gray-300 mb-4 leading-relaxed">
                 Founded with the vision of simplifying everyday life, Ezzy has
                 evolved from a simple delivery service to a comprehensive
                 platform offering meals, shopping, rides, and rentals - all
                 designed to make your life easier.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed">
                 We believe that everything you need should be accessible with
                 just a few taps, delivered with reliability and convenience that
                 exceeds expectations.
               </p>
             </div>
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-gradient-to-br from-primary-orange to-orange-600 rounded-2xl p-8 text-white"
+              whileHover={{
+                scale: 1.05,
+                boxShadow:
+                  "0 25px 50px rgba(255,107,53,0.3), 0 0 40px rgba(255,107,53,0.2)",
+              }}
+              className="bg-gradient-to-br from-primary-orange via-orange-500 to-orange-600 rounded-2xl p-8 text-white relative overflow-hidden shadow-2xl"
             >
-              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-              <p className="text-lg opacity-90">
+              {/* Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary-orange/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+              <h3 className="text-2xl font-bold mb-4 relative z-10">
+                Our Mission
+              </h3>
+              <p className="text-lg opacity-90 relative z-10">
                 To revolutionize everyday convenience by providing seamless
                 access to meals, essentials, transportation, and rentals through
                 one unified platform that brings communities together.
@@ -93,7 +106,7 @@ const Company = () => {
             viewport={{ once: true }}
             className="mb-20"
           >
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
               Our Values
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -101,10 +114,10 @@ const Company = () => {
                 <div className="w-16 h-16 bg-primary-orange text-white rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-white mb-3">
                   Reliability
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-300">
                   We deliver on our promises with consistent, dependable service
                   you can count on.
                 </p>
@@ -113,10 +126,8 @@ const Company = () => {
                 <div className="w-16 h-16 bg-primary-orange text-white rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Community
-                </h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold text-white mb-3">Community</h3>
+                <p className="text-gray-300">
                   We connect people, businesses, and communities to create
                   stronger local ecosystems.
                 </p>
@@ -125,10 +136,10 @@ const Company = () => {
                 <div className="w-16 h-16 bg-primary-orange text-white rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-white mb-3">
                   Excellence
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-300">
                   We strive for excellence in every interaction, constantly
                   improving our services.
                 </p>
@@ -156,10 +167,10 @@ const Company = () => {
                   >
                     <IconComponent className="w-8 h-8" />
                   </motion.div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-3xl font-bold text-white mb-2">
                     {stat.number}
                   </h3>
-                  <p className="text-gray-600">{stat.label}</p>
+                  <p className="text-gray-300">{stat.label}</p>
                 </motion.div>
               );
             })}

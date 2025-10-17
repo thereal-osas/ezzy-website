@@ -10,7 +10,7 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-custom-dark shadow-2xl border-b border-custom-dark-secondary sticky top-0 z-50 backdrop-blur-sm bg-opacity-95">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -35,7 +35,7 @@ const Header = () => {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`text-gray-700 hover:text-primary-orange transition-colors duration-200 ${
+                className={`text-gray-300 hover:text-primary-orange transition-colors duration-200 ${
                   location.pathname === "/company"
                     ? "text-primary-orange font-semibold"
                     : ""
@@ -48,7 +48,7 @@ const Header = () => {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`text-gray-700 hover:text-primary-orange transition-colors duration-200 ${
+                className={`text-gray-300 hover:text-primary-orange transition-colors duration-200 ${
                   location.pathname === "/vendors"
                     ? "text-primary-orange font-semibold"
                     : ""
@@ -61,7 +61,7 @@ const Header = () => {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`text-gray-700 hover:text-primary-orange transition-colors duration-200 ${
+                className={`text-gray-300 hover:text-primary-orange transition-colors duration-200 ${
                   location.pathname === "/riders"
                     ? "text-primary-orange font-semibold"
                     : ""
@@ -78,7 +78,7 @@ const Header = () => {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`text-gray-700 hover:text-primary-orange transition-colors duration-200 ${
+                className={`text-gray-300 hover:text-primary-orange transition-colors duration-200 ${
                   location.pathname === "/contact"
                     ? "text-primary-orange font-semibold"
                     : ""
@@ -91,7 +91,7 @@ const Header = () => {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`text-gray-700 hover:text-primary-orange transition-colors duration-200 ${
+                className={`text-gray-300 hover:text-primary-orange transition-colors duration-200 ${
                   location.pathname === "/faqs"
                     ? "text-primary-orange font-semibold"
                     : ""
@@ -106,7 +106,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-primary-orange transition-colors duration-200"
+              className="text-gray-300 hover:text-primary-orange transition-colors duration-200"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -126,37 +126,37 @@ const Header = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white border-t border-gray-100"
+            className="md:hidden bg-custom-dark border-t border-custom-dark-secondary"
           >
             <div className="px-4 py-4 space-y-4">
               <a
                 href="#"
-                className="block text-gray-700 hover:text-primary-orange transition-colors duration-200"
+                className="block text-gray-300 hover:text-primary-orange transition-colors duration-200"
               >
                 Company
               </a>
               <a
                 href="#"
-                className="block text-gray-700 hover:text-primary-orange transition-colors duration-200"
+                className="block text-gray-300 hover:text-primary-orange transition-colors duration-200"
               >
                 Vendors
               </a>
               <a
                 href="#"
-                className="block text-gray-700 hover:text-primary-orange transition-colors duration-200"
+                className="block text-gray-300 hover:text-primary-orange transition-colors duration-200"
               >
                 Riders
               </a>
 
               <a
                 href="#"
-                className="block text-gray-700 hover:text-primary-orange transition-colors duration-200"
+                className="block text-gray-300 hover:text-primary-orange transition-colors duration-200"
               >
                 Contact Us
               </a>
               <a
                 href="#"
-                className="block text-gray-700 hover:text-primary-orange transition-colors duration-200"
+                className="block text-gray-300 hover:text-primary-orange transition-colors duration-200"
               >
                 FAQs
               </a>
