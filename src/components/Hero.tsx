@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Smartphone, Download } from "lucide-react";
 // import { useState, useEffect } from "react";
 
 const Hero = () => {
@@ -208,44 +207,29 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="text-xl text-gray-300 mb-8 max-w-2xl"
             >
-              Download Ezzy and experience seamless delivery, quick rides, and
-              convenient rentals - all in one app.
+              Experience seamless delivery, quick rides, and convenient rentals
+              - all in one platform. Start ordering now!
             </motion.p>
 
-            {/* App Download Buttons */}
+            {/* Order Now Button */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="flex justify-center lg:justify-start"
             >
               <motion.a
                 href="https://dev.ezzymarket.com"
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
-                  y: -2,
+                  boxShadow: "0 15px 35px rgba(255,107,53,0.4)",
+                  y: -3,
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="group flex items-center justify-center bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-all duration-300 relative overflow-hidden"
+                className="group flex items-center justify-center bg-primary-orange text-white px-8 py-4 rounded-lg hover:bg-orange-600 transition-all duration-300 relative overflow-hidden font-bold text-lg"
               >
-                <motion.div className="absolute inset-0 bg-gradient-to-r from-primary-orange to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <Download className="h-5 w-5 mr-2 relative z-10 group-hover:animate-bounce" />
-                <span className="relative z-10">Download on Google Play</span>
-              </motion.a>
-              <motion.a
-                href="https://dev.ezzymarket.com"
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
-                  y: -2,
-                }}
-                whileTap={{ scale: 0.95 }}
-                className="group flex items-center justify-center bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-all duration-300 relative overflow-hidden"
-              >
-                <motion.div className="absolute inset-0 bg-gradient-to-r from-primary-orange to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <Smartphone className="h-5 w-5 mr-2 relative z-10 group-hover:animate-bounce" />
-                <span className="relative z-10">Download on App Store</span>
+                <motion.div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="relative z-10">Order Now</span>
               </motion.a>
             </motion.div>
           </motion.div>
