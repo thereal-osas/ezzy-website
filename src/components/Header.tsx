@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ShoppingCart } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 
@@ -100,6 +100,25 @@ const Header = () => {
                 FAQs
               </motion.div>
             </Link>
+
+            {/* Shopping Cart Icon */}
+            <a
+              href="https://dev.ezzymarket.com/shopping"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="relative text-gray-300 hover:text-primary-orange transition-colors duration-200 p-2"
+              >
+                <ShoppingCart className="h-6 w-6" />
+                {/* Cart Badge Placeholder - can be activated when cart functionality is added */}
+                {/* <span className="absolute -top-1 -right-1 bg-primary-orange text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">
+                  0
+                </span> */}
+              </motion.div>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -129,36 +148,52 @@ const Header = () => {
             className="md:hidden bg-custom-dark border-t border-custom-dark-secondary"
           >
             <div className="px-4 py-4 space-y-4">
-              <a
-                href="#"
+              <Link
+                to="/company"
+                onClick={() => setIsMenuOpen(false)}
                 className="block text-gray-300 hover:text-primary-orange transition-colors duration-200"
               >
                 Company
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/vendors"
+                onClick={() => setIsMenuOpen(false)}
                 className="block text-gray-300 hover:text-primary-orange transition-colors duration-200"
               >
                 Vendors
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/riders"
+                onClick={() => setIsMenuOpen(false)}
                 className="block text-gray-300 hover:text-primary-orange transition-colors duration-200"
               >
                 Riders
-              </a>
-
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/contact"
+                onClick={() => setIsMenuOpen(false)}
                 className="block text-gray-300 hover:text-primary-orange transition-colors duration-200"
               >
                 Contact Us
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/faqs"
+                onClick={() => setIsMenuOpen(false)}
                 className="block text-gray-300 hover:text-primary-orange transition-colors duration-200"
               >
                 FAQs
+              </Link>
+
+              {/* Shopping Cart Link for Mobile */}
+              <a
+                href="https://dev.ezzymarket.com/shopping"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMenuOpen(false)}
+                className="flex items-center text-gray-300 hover:text-primary-orange transition-colors duration-200"
+              >
+                <ShoppingCart className="h-5 w-5 mr-2" />
+                Shopping Cart
               </a>
             </div>
           </motion.div>
