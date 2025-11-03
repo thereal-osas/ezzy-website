@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import heroVideo from "../assets/ezzy-hero.mp4";
+import { Zap, Star } from "lucide-react";
 // import { useState, useEffect } from "react";
 
 const Hero = () => {
@@ -129,20 +131,23 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="text-center lg:text-left"
           >
-            {/* Image Placeholder - Hero Illustration (Mobile) */}
+            {/* Hero Video (Mobile) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="w-full h-64 bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl border-2 border-dashed border-orange-400 flex items-center justify-center mb-8 lg:hidden"
+              className="w-full h-64 rounded-2xl overflow-hidden mb-8 lg:hidden shadow-2xl"
             >
-              <div className="text-center text-orange-400">
-                <div className="text-4xl mb-2">🎨</div>
-                <p className="text-sm font-medium">Hero Illustration</p>
-                <p className="text-xs opacity-75">
-                  Interactive visual elements
-                </p>
-              </div>
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+                src={heroVideo}
+              >
+                Your browser does not support the video tag.
+              </video>
             </motion.div>
 
             {/* Sequential Greeting Animation */}
@@ -242,47 +247,50 @@ const Hero = () => {
             className="flex justify-center lg:justify-end"
           >
             <div className="relative w-full max-w-lg">
-              {/* Image Placeholder - Main Hero Visual (Desktop) */}
+              {/* Hero Video - Main Visual (Desktop) */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="w-full h-96 bg-gradient-to-br from-gray-800 to-gray-700 rounded-3xl border-2 border-dashed border-orange-400 flex items-center justify-center shadow-2xl"
+                className="w-full h-96 rounded-3xl overflow-hidden shadow-2xl"
               >
-                <div className="text-center text-orange-400">
-                  <div className="text-6xl mb-4">📱</div>
-                  <p className="text-lg font-medium mb-2">
-                    App Interface Mockup
-                  </p>
-                  <p className="text-sm opacity-75 max-w-xs">
-                    Interactive app demonstration and service showcase will be
-                    displayed here
-                  </p>
-                </div>
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                  src={heroVideo}
+                >
+                  Your browser does not support the video tag.
+                </video>
               </motion.div>
 
-              {/* Image Placeholder - Secondary Visual Elements */}
+              {/* Feature Badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-gray-700 to-gray-600 rounded-2xl border border-dashed border-orange-400 flex items-center justify-center"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                className="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-primary-orange to-orange-600 rounded-2xl shadow-2xl flex items-center justify-center backdrop-blur-sm"
               >
-                <div className="text-center text-orange-400">
-                  <div className="text-2xl">🚀</div>
-                  <p className="text-xs">Feature</p>
+                <div className="text-center text-white">
+                  <Zap className="w-10 h-10 mx-auto mb-1" />
+                  <p className="text-xs font-semibold">Fast</p>
                 </div>
               </motion.div>
 
+              {/* Rating Badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
-                className="absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-br from-gray-700 to-gray-600 rounded-xl border border-dashed border-orange-400 flex items-center justify-center"
+                whileHover={{ scale: 1.1, rotate: -5 }}
+                className="absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl shadow-2xl flex items-center justify-center backdrop-blur-sm"
               >
-                <div className="text-center text-orange-400">
-                  <div className="text-xl">⭐</div>
-                  <p className="text-xs">Rating</p>
+                <div className="text-center text-white">
+                  <Star className="w-8 h-8 mx-auto mb-1 fill-white" />
+                  <p className="text-xs font-bold">4.8</p>
                 </div>
               </motion.div>
 
