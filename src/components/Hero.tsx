@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroVideo from "../assets/ezzy-hero.mp4";
+import heroVideo from "../assets/ezzy-hero2.mp4";
 import { Zap, Star } from "lucide-react";
 // import { useState, useEffect } from "react";
 
@@ -233,7 +233,7 @@ const Hero = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="w-full h-96 rounded-3xl overflow-hidden shadow-2xl"
+                className="w-full h-[30rem] rounded-3xl overflow-hidden shadow-2xl"
               >
                 <video
                   autoPlay
