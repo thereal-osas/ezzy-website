@@ -131,25 +131,6 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="text-center lg:text-left"
           >
-            {/* Hero Video (Mobile) */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="w-full h-64 rounded-2xl overflow-hidden mb-8 lg:hidden shadow-2xl"
-            >
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-                src={heroVideo}
-              >
-                Your browser does not support the video tag.
-              </video>
-            </motion.div>
-
             {/* Sequential Greeting Animation */}
             {/* <div className="mb-6 h-32 flex flex-col justify-center">
               <AnimatePresence mode="wait">
@@ -247,7 +228,7 @@ const Hero = () => {
             className="flex justify-center lg:justify-end"
           >
             <div className="relative w-full max-w-lg">
-              {/* Hero Video - Main Visual (Desktop) */}
+              {/* Hero Video - Main Visual */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
