@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Bike, Clock, DollarSign, Star, MapPin, Shield } from "lucide-react";
+import ridersImage from "../assets/riders.jpg";
 
 const Riders = () => {
   const benefits = [
@@ -61,20 +62,18 @@ const Riders = () => {
               essential services - from deliveries to rides - across the city.
             </p>
 
-            {/* Image Placeholder - Rider Community */}
+            {/* Rider Community Image */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="w-full max-w-3xl mx-auto h-48 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl border-2 border-dashed border-orange-300 flex items-center justify-center mb-8"
+              className="w-full max-w-3xl mx-auto h-64 md:h-80 rounded-2xl overflow-hidden mb-8 shadow-2xl"
             >
-              <div className="text-center text-orange-600">
-                <div className="text-4xl mb-2">🏍️</div>
-                <p className="text-lg font-medium">Rider Community</p>
-                <p className="text-sm opacity-75">
-                  Active riders and success stories showcase
-                </p>
-              </div>
+              <img
+                src={ridersImage}
+                alt="Rider Community"
+                className="w-full h-full object-cover"
+              />
             </motion.div>
             <motion.a
               href="https://dev.ezzymarket.com"

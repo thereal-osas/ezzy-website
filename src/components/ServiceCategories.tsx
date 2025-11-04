@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { UtensilsCrossed, ShoppingBag, Car, Home } from "lucide-react";
+import serviceImage from "../assets/delivery-service1.jpg";
 
 const ServiceCategories = () => {
   const services = [
@@ -66,21 +67,19 @@ const ServiceCategories = () => {
             Try the everything app.
           </p>
 
-          {/* Image Placeholder - Service Overview */}
+          {/* Service Overview Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="w-full max-w-4xl mx-auto h-48 bg-gradient-to-br from-custom-dark-secondary to-custom-dark-tertiary rounded-2xl border-2 border-dashed border-orange-400 flex items-center justify-center shadow-2xl"
+            className="w-full max-w-4xl mx-auto h-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl"
           >
-            <div className="text-center text-orange-400">
-              <div className="text-5xl mb-3">🚀</div>
-              <p className="text-lg font-medium">Service Categories Overview</p>
-              <p className="text-sm opacity-75">
-                Interactive service demonstration and feature highlights
-              </p>
-            </div>
+            <img
+              src={serviceImage}
+              alt="Service Categories Overview"
+              className="w-full h-full object-cover"
+            />
           </motion.div>
         </motion.div>
 

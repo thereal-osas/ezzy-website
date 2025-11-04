@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
-import { MapPin, Star, Clock } from "lucide-react";
-import { useState } from "react";
+import { MapPin } from "lucide-react";
 
 const InteractiveMap = () => {
-  const [selectedLocation, setSelectedLocation] = useState<number | null>(null);
 
   const locations = [
     {
@@ -65,7 +63,7 @@ const InteractiveMap = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-            Click on any live location to order from restaurants near you
+            Explore live locations of restaurants near you
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover amazing restaurants in your area
@@ -120,12 +118,6 @@ const InteractiveMap = () => {
                 left: location.position.left,
                 transform: "translate(-50%, -50%)",
               }}
-              className="cursor-pointer"
-              onClick={() =>
-                setSelectedLocation(
-                  selectedLocation === location.id ? null : location.id
-                )
-              }
             >
               {/* Pulsing Ring */}
               <motion.div
@@ -135,48 +127,9 @@ const InteractiveMap = () => {
               />
 
               {/* Marker */}
-              <motion.div
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-                className="relative w-8 h-8 bg-primary-orange rounded-full flex items-center justify-center shadow-lg border-2 border-white"
-              >
+              <motion.div className="relative w-8 h-8 bg-primary-orange rounded-full flex items-center justify-center shadow-lg border-2 border-white">
                 <MapPin className="w-4 h-4 text-white" />
               </motion.div>
-
-              {/* Info Card */}
-              {selectedLocation === location.id && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10, scale: 0.8 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 10, scale: 0.8 }}
-                  transition={{ duration: 0.3 }}
-                  className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-custom-dark-secondary rounded-lg shadow-xl p-4 min-w-48 border border-custom-dark-tertiary backdrop-blur-sm"
-                >
-                  <h3 className="font-bold text-white mb-1">{location.name}</h3>
-                  <p className="text-sm text-gray-300 mb-2">
-                    {location.cuisine}
-                  </p>
-
-                  <div className="flex items-center justify-between text-sm">
-                    <div className="flex items-center">
-                      <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                      <span className="font-medium">{location.rating}</span>
-                    </div>
-                    <div className="flex items-center text-gray-300">
-                      <Clock className="w-4 h-4 mr-1" />
-                      <span>{location.deliveryTime}</span>
-                    </div>
-                  </div>
-
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="w-full mt-3 bg-primary-orange text-white py-2 rounded-lg font-medium hover:bg-orange-600 transition-colors duration-200"
-                  >
-                    Order Now
-                  </motion.button>
-                </motion.div>
-              )}
             </motion.div>
           ))}
 
@@ -200,7 +153,7 @@ const InteractiveMap = () => {
           className="text-center mt-8"
         >
           <p className="text-gray-300">
-            Click on any marker to see restaurant details and place your order
+            View restaurant locations across your area
           </p>
         </motion.div>
       </div>

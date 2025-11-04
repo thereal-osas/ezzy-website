@@ -7,6 +7,7 @@ import {
   Shield,
   Smartphone,
 } from "lucide-react";
+import vendorImage from "../assets/vendor.jpg";
 
 const Vendors = () => {
   const benefits = [
@@ -95,20 +96,18 @@ const Vendors = () => {
               help you reach more customers and increase your revenue.
             </p>
 
-            {/* Image Placeholder - Vendor Success Stories */}
+            {/* Vendor Success Stories Image */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="w-full max-w-3xl mx-auto h-48 bg-gradient-to-br from-custom-dark-secondary to-custom-dark-tertiary rounded-2xl border-2 border-dashed border-orange-400 flex items-center justify-center mb-8 shadow-2xl"
+              className="w-full max-w-3xl mx-auto h-64 md:h-80 rounded-2xl overflow-hidden mb-8 shadow-2xl"
             >
-              <div className="text-center text-orange-400">
-                <div className="text-4xl mb-2">🤝</div>
-                <p className="text-lg font-medium">Vendor Success Stories</p>
-                <p className="text-sm opacity-75">
-                  Partner testimonials and business growth visuals
-                </p>
-              </div>
+              <img
+                src={vendorImage}
+                alt="Vendor Success Stories"
+                className="w-full h-full object-cover"
+              />
             </motion.div>
             <motion.button
               whileHover={{
