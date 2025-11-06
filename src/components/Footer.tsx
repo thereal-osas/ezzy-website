@@ -1,7 +1,71 @@
 import { motion } from "framer-motion";
 import { Twitter, Instagram, Facebook, Linkedin } from "lucide-react";
+import {  useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  // Helper function to handle link clicks
+  const handleLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    link: string,
+    category: string
+  ) => {
+    e.preventDefault();
+
+    // Handle Company links - scroll to sections or navigate
+    if (category === "Company") {
+      if (link === "About") {
+        navigate("/company");
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }, 100);
+      } else if (link === "Careers") {
+        navigate("/company");
+        // Scroll to careers section if it exists
+      } else if (link === "FAQs") {
+        navigate("/faqs");
+      } else if (link === "Blog") {
+        navigate("/company");
+        // Scroll to blog section if it exists
+      } else if (link === "Contact") {
+        navigate("/contact");
+      } else if (link === "Terms of Use") {
+        navigate("/terms-of-use");
+      } else if (link === "Privacy Policy") {
+        navigate("/privacy-policy");
+      }
+    }
+    // Handle Customer links - navigate to Coming Soon
+    else if (category === "Customers") {
+      if (link === "EzzyPrime" || link === "EzzyCourier") {
+        navigate("/coming-soon", { state: { serviceName: link } });
+      } else if (link === "Storefront") {
+        navigate("/coming-soon", { state: { serviceName: link } });
+      }
+    }
+    // Handle Vendor links
+    else if (category === "Vendors") {
+      if (link === "Join our network") {
+        navigate("/vendors");
+      } else if (link === "Vendor portal") {
+        navigate("/vendors");
+      } else if (link === "Support") {
+        navigate("/contact");
+      }
+    }
+    // Handle Rider links
+    else if (category === "Riders") {
+      if (link === "Become a rider") {
+        navigate("/riders");
+      } else if (link === "Rider app") {
+        navigate("/riders");
+      } else if (link === "Support") {
+        navigate("/contact");
+      }
+    }
+  };
+
   const footerSections = [
     {
       title: "Company",
@@ -17,7 +81,7 @@ const Footer = () => {
     },
     {
       title: "Customers",
-      links: ["Chowpass", "Relay", "Storefront", "Documentation"],
+      links: ["EzzyPrime", "EzzyCourier", "Storefront"],
     },
     {
       title: "Vendors",
@@ -54,8 +118,9 @@ const Footer = () => {
                 {section.links.map((link) => (
                   <li key={link}>
                     <a
-                      href="https://dev.ezzymarket.com"
-                      className="text-gray-300 hover:text-white transition-colors duration-200"
+                      href="#"
+                      onClick={(e) => handleLinkClick(e, link, section.title)}
+                      className="text-gray-300 hover:text-white transition-colors duration-200 cursor-pointer"
                     >
                       {link}
                     </a>

@@ -8,6 +8,9 @@ import Vendors from "./pages/Vendors";
 import Riders from "./pages/Riders";
 import Contact from "./pages/Contact";
 import FAQs from "./pages/FAQs";
+import ComingSoon from "./pages/ComingSoon";
+import TermsOfUse from "./pages/TermsOfUse";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
             <Route path="/riders" element={<Riders />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faqs" element={<FAQs />} />
+            <Route path="/coming-soon" element={<ComingSoon />} />
+            <Route path="/terms-of-use" element={<TermsOfUse />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </main>
         <Footer />

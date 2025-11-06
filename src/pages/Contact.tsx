@@ -1,26 +1,26 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Clock, MessageCircle, Send } from "lucide-react";
+import { Mail, Phone, Clock, MessageCircle, Send } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
     {
       icon: Phone,
       title: "Phone",
-      details: "+234 800 EZZY (3999)",
+      details: "+234 800 123 4567",
       description: "Call us for immediate assistance",
     },
     {
       icon: Mail,
       title: "Email",
-      details: "support@ezzy.com",
+      details: "support@ezzy.ng",
       description: "Send us an email anytime",
     },
-    {
-      icon: MapPin,
-      title: "Address",
-      details: "123 Innovation Drive, Lagos, Nigeria",
-      description: "Visit our headquarters",
-    },
+    // {
+    //   icon: MapPin,
+    //   title: "Address",
+    //   details: "123 Innovation Drive, Lagos, Nigeria",
+    //   description: "Visit our headquarters",
+    // },
     {
       icon: Clock,
       title: "Support Hours",
@@ -70,7 +70,7 @@ const Contact = () => {
       {/* Contact Info */}
       <section className="py-20 bg-custom-dark relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {contactInfo.map((info, index) => {
               const IconComponent = info.icon;
               return (
@@ -218,25 +218,7 @@ const Contact = () => {
                 </motion.button>
               </div>
 
-              <div className="bg-custom-dark-secondary rounded-2xl p-8 border border-custom-dark-tertiary backdrop-blur-sm">
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  Business Inquiries
-                </h3>
-                <p className="text-gray-300 mb-4">
-                  Interested in partnering with us or have a business proposal?
-                </p>
-                <div className="space-y-2 text-sm text-gray-300">
-                  <p>
-                    <strong>Partnerships:</strong> partnerships@ezzy.com
-                  </p>
-                  <p>
-                    <strong>Media:</strong> media@ezzy.com
-                  </p>
-                  <p>
-                    <strong>Careers:</strong> careers@ezzy.com
-                  </p>
-                </div>
-              </div>
+             
 
               <div className="bg-custom-dark-secondary rounded-2xl p-8 border border-custom-dark-tertiary backdrop-blur-sm">
                 <h3 className="text-2xl font-bold text-white mb-4">
