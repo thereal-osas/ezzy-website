@@ -90,7 +90,7 @@ const FAQs = () => {
             >
               <motion.button
                 onClick={() => toggleFAQ(index)}
-                whileHover={{ backgroundColor: "#f3f4f6" }}
+                // whileHover={{ backgroundColor: "#f3f4f6" }}
                 className="w-full px-6 py-6 text-left flex items-center justify-between focus:outline-none"
               >
                 <h3 className="text-lg font-semibold text-gray-900 pr-4">

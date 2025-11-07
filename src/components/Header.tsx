@@ -101,40 +101,64 @@ const Header = () => {
               </motion.div>
             </Link>
 
-            {/* Shopping Cart Icon */}
+            {/* Shopping Cart Button - Capsule Design */}
             <a
               href="https://dev.ezzymarket.com/shopping"
               target="_blank"
               rel="noopener noreferrer"
             >
               <motion.div
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
-                className="relative text-gray-300 hover:text-primary-orange transition-colors duration-200 p-2"
+                className="relative"
               >
-                <ShoppingCart className="h-6 w-6" />
-                {/* Cart Badge Placeholder - can be activated when cart functionality is added */}
-                {/* <span className="absolute -top-1 -right-1 bg-primary-orange text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">
-                  0
-                </span> */}
+                {/* Capsule Button with Enhanced 3D Depth - Pure CSS */}
+                <div className="cart-button-3d relative flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 via-primary-orange to-orange-600 rounded-full transition-all duration-300">
+                  <ShoppingCart className="h-5 w-5 text-white" />
+                  <span className="text-white font-semibold text-sm">
+                    Add to cart
+                  </span>
+
+                  {/* Discount Badge - Smaller and Repositioned */}
+                  <div className="absolute -top-1 -right-3 bg-yellow-400 text-custom-dark rounded-full w-9 h-9 flex items-center justify-center shadow-lg transform rotate-12">
+                    <div className="text-center">
+                      <p className="text-[7px] font-bold leading-none">Save</p>
+                      <p className="text-[11px] font-bold leading-none mt-0.5">10%</p>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             </a>
           </div>
 
           {/* Mobile cart icon and menu button */}
-          <div className="md:hidden flex items-center space-x-4">
-            {/* Mobile Shopping Cart Icon */}
+          <div className="md:hidden flex items-center space-x-2">
+            {/* Mobile Shopping Cart Button - Capsule Design */}
             <a
               href="https://dev.ezzymarket.com/shopping"
               target="_blank"
               rel="noopener noreferrer"
             >
               <motion.div
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
-                className="relative text-gray-300 hover:text-primary-orange transition-colors duration-200 p-2"
+                className="relative"
               >
-                <ShoppingCart className="h-6 w-6" />
+                {/* Compact Capsule Button for Mobile with Enhanced 3D Depth - Pure CSS */}
+                <div className="cart-button-3d-mobile relative flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-orange-500 via-primary-orange to-orange-600 rounded-full transition-all duration-300">
+                  <ShoppingCart className="h-4 w-4 text-white" />
+                  <span className="text-white font-semibold text-xs">
+                    Cart
+                  </span>
+
+                  {/* Discount Badge - Smaller and Repositioned for Mobile */}
+                  <div className="absolute -top-0.5 -right-2 bg-yellow-400 text-custom-dark rounded-full w-7 h-7 flex items-center justify-center shadow-lg transform rotate-12">
+                    <div className="text-center">
+                      <p className="text-[6px] font-bold leading-none">Save</p>
+                      <p className="text-[9px] font-bold leading-none mt-0.5">10%</p>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             </a>
 

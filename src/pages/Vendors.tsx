@@ -109,16 +109,19 @@ const Vendors = () => {
                 className="w-full h-full object-cover"
               />
             </motion.div>
-            <motion.button
+            <motion.a
+              href="https://dev-vendor.ezzymarket.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{
                 scale: 1.05,
                 boxShadow: "0 10px 25px rgba(255,107,53,0.3)",
               }}
               whileTap={{ scale: 0.95 }}
-              className="bg-primary-orange text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-all duration-300"
+              className="inline-block bg-primary-orange text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-all duration-300"
             >
               Become a Vendor
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
       </section>
@@ -237,7 +240,9 @@ const Vendors = () => {
               more customers today.
             </p>
             <motion.a
-              href="https://dev.ezzymarket.com"
+              href="https://dev-vendor.ezzymarket.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{
                 scale: 1.05,
                 boxShadow: "0 10px 25px rgba(0,0,0,0.2)",

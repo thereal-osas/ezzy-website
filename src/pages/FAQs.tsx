@@ -8,76 +8,64 @@ const FAQs = () => {
 
   const faqs = [
     {
-      category: "General",
-      question: "What is Ezzy and what services do you offer?",
+      category: "Vendor Issues",
+      question: "Can I get a refund if the vendor is unreachable?",
       answer:
-        "Ezzy is a comprehensive platform offering food delivery, shopping, quick rides, and convenient rentals. We connect you with everything you need through one easy-to-use app.",
+        "Yes, you're entitled to a full refund if the vendor cannot fulfill your order. Refunds are processed within 24-72 hours depending on your payment method. We'll notify you once it's processed.",
     },
     {
-      category: "Delivery",
-      question: "How long does delivery usually take?",
+      category: "Rider Delays",
+      question: "Why is my rider taking so long to deliver?",
       answer:
-        "Most deliveries are completed within 30-45 minutes. However, delivery times may vary based on distance, weather conditions, and order volume. You can track your order in real-time through our app.",
+        "We sincerely apologize for the delay. Riders may be affected by traffic congestion, weather conditions, or high order volume. We're tracking the rider and will update you shortly.",
     },
     {
-      category: "Pricing",
-      question: "What are the delivery fees?",
+      category: "Rider Delays",
+      question: "What if the food arrives cold due to the delay?",
       answer:
-        "Delivery fees start from ₦200 and vary based on distance and order value. Orders above ₦5,000 qualify for free delivery in most areas. Ride and rental pricing varies by service type and duration.",
+        "We're truly sorry if your meal arrives cold. Please report it immediately and we'll offer a refund, reorder, or voucher depending on the situation.",
     },
     {
-      category: "Tracking",
-      question: "Can I track my order or ride in real-time?",
+      category: "Ride Cancellations",
+      question: "I cancelled my ride — will I be charged?",
       answer:
-        "Yes! Once your order is confirmed or ride is booked, you can track everything in real-time through our app. You'll receive notifications at every step of the process.",
+        "If the cancellation occurred after a driver was assigned or en route, a small cancellation fee may apply. This helps compensate the driver for time and fuel.",
     },
     {
-      category: "Payment",
-      question: "What payment methods do you accept?",
+      category: "Ride Cancellations",
+      question: "I cancelled because the driver was delayed — will I still be charged?",
       answer:
-        "We accept cash on delivery, bank transfers, card payments, mobile money, and digital wallets. All online payments are secured with bank-level encryption.",
+        "If the driver was significantly delayed or unresponsive, you should not be charged. Please report the issue and we'll investigate immediately.",
     },
     {
-      category: "Support",
-      question: "What if my order is incorrect or damaged?",
+      category: "Order Refunds",
+      question: "How long does it take to get my refund?",
       answer:
-        "If there's any issue with your order, please contact our customer support immediately through the app or call our 24/7 helpline. We'll either send a replacement or provide a full refund.",
+        "Refunds typically take 24-72 business hours. Wallet refunds reflect instantly. Bank or card refunds may take longer depending on your financial institution.",
     },
     {
-      category: "Service Hours",
-      question: "Do you operate 24/7?",
+      category: "Order Refunds",
+      question: "I cancelled by mistake can I reverse it and still get my order?",
       answer:
-        "Our service hours vary by location and service type. Most restaurants deliver until 11 PM, while some convenience stores and pharmacies offer 24/7 service. Rides and rentals have varying availability.",
+        "If the cancellation was recent and the order has not been processed, We will be able to reinstate it. Please contact support immediately for further assistance.",
     },
     {
-      category: "Business",
-      question: "How can I become a vendor or partner with Ezzy?",
+      category: "Order Refunds",
+      question: "Can I get a voucher instead of a refund?",
       answer:
-        "Visit our vendor portal or contact our business development team through the 'Vendors' page. We'll guide you through the onboarding process and help set up your business on our platform.",
+        "Yes, if you prefer a voucher for future use. We can issue one immediately. Just let us know and we'll process it right away.",
     },
     {
-      category: "Orders",
-      question: "Is there a minimum order amount?",
+      category: "Rental Safety",
+      question: "How do I know if a rental listing is fake?",
       answer:
-        "Minimum order amounts vary by vendor and service type, typically ranging from ₦1,000 to ₦2,500. This information is displayed on each vendor's page before you place an order.",
+        "Warning signs include unusually low prices, vague descriptions, requests for upfront payments without inspection, or refusal to meet in person. Always verify before making any payment.",
     },
     {
-      category: "Rentals",
-      question: "How do rentals work on Ezzy?",
+      category: "Rental Safety",
+      question: "How can I protect myself from fake listings?",
       answer:
-        "Browse available rental items, select your rental period, make payment, and arrange pickup or delivery. All rental items are verified and insured. Return instructions will be provided with your rental.",
-    },
-    {
-      category: "Rides",
-      question: "What types of rides are available?",
-      answer:
-        "We offer various ride options including economy, comfort, and premium vehicles. You can also book rides for deliveries, airport transfers, and scheduled trips.",
-    },
-    {
-      category: "Account",
-      question: "How do I create an account or reset my password?",
-      answer:
-        "Download the Ezzy app and sign up with your phone number or email. For password resets, use the 'Forgot Password' option on the login screen, and we'll send you a reset link.",
+        "Always inspect the property in person, avoid paying before viewing, and meet in public places. Use vendors with 'Instant Confirmation' tags. Enable notifications for real-time updates. We're also improving vendor vetting.",
     },
   ];
 
@@ -179,8 +167,8 @@ const FAQs = () => {
               >
                 <motion.button
                   onClick={() => toggleFAQ(index)}
-                  whileHover={{ backgroundColor: "#f3f4f6" }}
-                  className="w-full px-6 py-6 text-left flex items-center justify-between focus:outline-none"
+                  whileHover={{ backgroundColor: "rgba(255, 107, 53, 0.1)" }}
+                  className="w-full px-6 py-6 text-left flex items-center justify-between focus:outline-none transition-colors duration-200"
                 >
                   <div className="flex items-center">
                     <span className="bg-primary-orange text-white text-xs px-2 py-1 rounded-full mr-4">

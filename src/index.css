@@ -37,3 +37,49 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #e55a2b;
 }
+
+/* 3D Cart Button Effects */
+.cart-button-3d {
+  box-shadow:
+    0 4px 14px 0 rgba(255, 107, 53, 0.4),
+    0 8px 20px 0 rgba(0, 0, 0, 0.3),
+    0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cart-button-3d:hover {
+  box-shadow:
+    0 6px 20px 0 rgba(255, 107, 53, 0.5),
+    0 12px 30px 0 rgba(0, 0, 0, 0.4),
+    0 4px 8px 0 rgba(0, 0, 0, 0.25);
+}
+
+.cart-button-3d:active {
+  box-shadow:
+    0 2px 8px 0 rgba(255, 107, 53, 0.3),
+    0 4px 12px 0 rgba(0, 0, 0, 0.2),
+    0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  transform: translateY(2px);
+}
+
+/* Mobile Cart Button 3D Effects */
+.cart-button-3d-mobile {
+  box-shadow:
+    0 3px 12px 0 rgba(255, 107, 53, 0.4),
+    0 6px 16px 0 rgba(0, 0, 0, 0.3),
+    0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cart-button-3d-mobile:hover {
+  box-shadow:
+    0 5px 16px 0 rgba(255, 107, 53, 0.5),
+    0 10px 24px 0 rgba(0, 0, 0, 0.4),
+    0 3px 6px 0 rgba(0, 0, 0, 0.25);
+}
+
+.cart-button-3d-mobile:active {
+  box-shadow:
+    0 2px 6px 0 rgba(255, 107, 53, 0.3),
+    0 3px 10px 0 rgba(0, 0, 0, 0.2),
+    0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  transform: translateY(2px);
+}
